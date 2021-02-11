@@ -10,7 +10,8 @@ namespace RPSLS
     {
         int playerOneScore;
         int playerTwoScore;
-
+        int playerInput;
+        bool validChoice;
         public RunGame()
         {
             playerOneScore = 0;
@@ -56,8 +57,9 @@ namespace RPSLS
         {
 
         }
-        public void PlayGame()
+        public void PlayRound()
         {
+
 
         }
 
