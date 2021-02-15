@@ -75,11 +75,12 @@ namespace RPSLS
         }
         public void CompareActions()
         {
-            
+            //rock 0, paper 1, scissors 2, lizard 3, spock 4
+
             Console.WriteLine($"{playerOne.playerName} chose {playerOne.playerGesture}.");
             Console.WriteLine($"{playerTwo.playerName} picked {playerTwo.playerGesture}.")
             
-            if (playerOne.playerGesture && playerTwo.playerGesture)
+            if (playerOne.playerGesture = 0 && playerTwo.playerGesture = 2)
             {
                 Console.WriteLine($"{playerOne.playerName} won this round!");
                 playerOneScore++;
@@ -88,6 +89,7 @@ namespace RPSLS
             else if //p1 rock, p2 lizard
             {
                 Console.WriteLine($"{playerOne.playerName} won this round!");
+                playerOneScore++;
             }
             else if //p2 rock, p1 scissors
             {
@@ -97,70 +99,87 @@ namespace RPSLS
             else if //p2 rock, p1 lizard
             {
                 Console.WriteLine($"{playerTwo.playerName} won this round!");
+                playerTwoScore++;
             }
             else if //p1 paper, p2 rock
             {
                 Console.WriteLine($"{playerOne.playerName} won this round!");
+                playerOneScore++;
             }
             else if //p1 paper, p2 spock
             {
                 Console.WriteLine($"{playerOne.playerName} won this round!");
+                playerOneScore++;
             }
             else if //p2 paper, p1 rock
             {
                 Console.WriteLine($"{playerTwo.playerName} won this round!");
+                playerTwoScore++;
             }
             else if //p2 paper, p1 spock
             {
                 Console.WriteLine($"{playerTwo.playerName} won this round!");
+                playerTwoScore++;
             }
             else if //p1 scissors, p2 paper
             {
                 Console.WriteLine($"{playerOne.playerName} won this round!");
+                playerOneScore++;
             }
             else if //p1 scissors, p2 lizard
             {
                 Console.WriteLine($"{playerOne.playerName} won this round!");
+                playerOneScore++;
             }
             else if //p2 scissors, p1 paper
             {
                 Console.WriteLine($"{playerTwo.playerName} won this round!");
+                playerTwoScore++;
             }
             else if //p2 scissors, p1 lizard
             {
                 Console.WriteLine($"{playerTwo.playerName} won this round!");
+                playerTwoScore++;
             }
             else if //p1 lizard, p2 paper
             {
                 Console.WriteLine($"{playerOne.playerName} won this round!");
+                playerOneScore++;
             }
             else if //p1 lizard, p2 spock
             {
                 Console.WriteLine($"{playerOne.playerName} won this round!");
+                playerOneScore++;
             }
             else if //p2 lizard, p2 paper
             {
                 Console.WriteLine($"{playerTwo.playerName} won this round!");
+                playerTwoScore++;
             }
             else if //p2 lizard, p2 spock
             {
                 Console.WriteLine($"{playerTwo.playerName} won this round!");
+                playerTwoScore++;
             }
             else if //p1 spock, p2 rock
             {
                 Console.WriteLine($"{playerOne.playerName} won this round!");
+                playerOneScore++;
             }
             else if //p1 spock, p2 scissors
             {
                 Console.WriteLine($"{playerOne.playerName} won this round!");
+                playerOneScore++;
             }
             else if //p2 spock, p1 rock
             {
                 Console.WriteLine($"{playerTwo.playerName} won this round!");
+                playerTwoScore++;
             }
             else if //p2 spock, p1 scissors
             {
                 Console.WriteLine($"{playerTwo.playerName} won this round!");
+                playerTwoScore++;
             }
             else
             {
@@ -183,9 +202,12 @@ namespace RPSLS
         }
         public void PlayRound()
         {
-
-            playerOne.PlayerGesture();
-            playerTwo.PlayerGesture();
+            while (playerOneScore < 3 && playerTwoScore < 3)
+            {
+                CompareActions();
+                playerOne.PlayerGesture();
+                playerTwo.PlayerGesture();
+            }
         }
 
     }
