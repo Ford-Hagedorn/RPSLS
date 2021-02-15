@@ -10,7 +10,13 @@ namespace RPSLS
     {
         static void Main(string[] args)
         {
-            
+            RunGame runGame = new RunGame();
+            runGame.WelcomeMessage();
+            runGame.ChooseOpponent();
+            runGame.DisplayRules();
+            runGame.PlayRound();
+            runGame.DisplayWinner();
+            Console.ReadLine();
 
 
         }
