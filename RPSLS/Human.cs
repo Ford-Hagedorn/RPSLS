@@ -10,7 +10,7 @@ namespace RPSLS
     {
         public Human()
         {
-
+            PlayerName();
         }
 
         public override void PlayerName()

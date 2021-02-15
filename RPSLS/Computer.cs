@@ -12,6 +12,7 @@ namespace RPSLS
         public Computer()
         {
             random = new Random();
+            PlayerName();
         }
         public override void PlayerGesture()
         {
@@ -21,7 +22,7 @@ namespace RPSLS
 
         public override void PlayerName()
         {
-            playerName = "COMPUTER154263";
+            playerName = "CPU";
         }
     }
 }
