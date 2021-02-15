@@ -6,15 +6,22 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Computer
+    class Computer : Player
     {
-        public string playerName;
-        public string playerNumber;
-
-        public Computer ComputerPlayer(string playerName, string playerNumber)
+        public Random random;
+        public Computer()
         {
-            this.playerName = "CPU";
-            this.playerNumber = "Player Two";
+            random = new Random();
+        }
+        public override void PlayerGesture()
+        {
+            int randomNumber = random.Next(0, actions.Count);
+            playerGesture = actions[randomNumber].name;
+        }
+
+        public override void PlayerName()
+        {
+            playerName = "COMPUTER154263";
         }
     }
 }

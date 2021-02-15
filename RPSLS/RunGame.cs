@@ -26,7 +26,12 @@ namespace RPSLS
 
         public void ChooseOpponent()
         {
-            Console.WriteLine("Who will you be playing against?");
+            Console.WriteLine("Who will you be playing against?" +
+                "Type 1 for a CPU player" +
+                "Type 2 for another human player");
+            int userInputPlayerOption = Convert.ToInt32(Console.ReadLine());
+            return userInputPlayerOption;
+
 
         }
 
@@ -48,14 +53,39 @@ namespace RPSLS
                 "Let's get this party started!" +
                 "I hope you have fun!");
         }
-        public void CompareActions()
+        public void CompareActions(Player PlayerName, Player PlayerGesture)
         {
 
+            Player PlayerName = 
+
+            Console.WriteLine($"{PlayerName} chose {PlayerGesture}.");
+            
+            if
+            {
+
+            }
+            else if
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("The players tied! Try again!");
+            }
         }
 
-        public void DisplayWinner()
+        public void DisplayWinner(int playerOneScore, int playerTwoScore)
         {
-
+            if (playerOneScore > playerTwoScore)
+            {
+                Console.WriteLine($"Congratulations {playerOneName}, you won!");
+                Console.WriteLine("The game is over.");
+            }
+            else
+            {
+                Console.WriteLine($"Congratulations {playerTwoName}, you won!");
+                Console.WriteLine("The game is over.");
+            }
         }
         public void PlayRound()
         {

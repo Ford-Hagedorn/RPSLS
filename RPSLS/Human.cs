@@ -6,24 +6,25 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Human
+    class Human : Player
     {
-        public string playerName;
-        public string playerNumber;
-
-        public Human PlayerOne(string playerName,string playerNumber)
+        public Human()
         {
-            this.playerName = Console.ReadLine();
-            this.playerNumber = "Player One";
 
         }
 
-        public Human PlayerTwo(string playerName, string playerNumber)
+        public override void PlayerName()
         {
-            this.playerName = Console.ReadLine();
-            this.playerNumber = "Player Two";
+            Console.WriteLine("Please enter your name");
+            playerName = Console.ReadLine();
 
         }
+        public override void PlayerGesture()
+        {
+            Console.WriteLine("Please choose an action for your turn");
+            playerGesture = Console.ReadLine();
+        }
+
     }
 
 }

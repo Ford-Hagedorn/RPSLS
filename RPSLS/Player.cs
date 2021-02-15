@@ -6,26 +6,32 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Player
+    abstract class Player
     {
         public string playerName;
-        public string playerNumber;
+        public int playerScore;
+        public List<Gesture> actions;
+        public string playerGesture;
 
-        
-
-        public Player(string playerName, string playerNumber)
+        public Player()
         {
-            this.playerName = Console.ReadLine();
-            this.playerNumber = playerNumber;
-            Console.WriteLine("Please enter your name!");
-            playerName = Console.ReadLine();
-            Console.WriteLine($"Awesome! Welcome to the game {playerName}!" +
-                $"you'll be {playerNumber}!");
 
-            
+            actions = new List<Gesture>();
+            Gesture rock = new Gesture("Rock");
+            Gesture paper = new Gesture("Paper");
+            Gesture scissors = new Gesture("Scissors");
+            Gesture lizard = new Gesture("Lizard");
+            Gesture spock = new Gesture("Spock");
 
+            actions.Add(rock);
+            actions.Add(paper);
+            actions.Add(scissors);
+            actions.Add(lizard);
+            actions.Add(spock);
         }
 
+        public abstract void PlayerName();
+        public abstract void PlayerGesture();
 
 
     }
